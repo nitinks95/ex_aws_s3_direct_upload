@@ -158,7 +158,7 @@ defmodule ExAws.S3.DirectUpload do
   end
 
   defp hmac(key, data) do
-    :crypto.hmac(:sha256, key, data)
+    :crypto.mac(:hamc, :sha256, key, data)
   end
 
   defp security_token do
